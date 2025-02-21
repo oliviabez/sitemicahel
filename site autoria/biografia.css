@@ -1,0 +1,239 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+
+}
+
+img{
+  width: 40%;
+  height: 40%;
+  object-fit: contain; /* A imagem será ajustada para caber dentro do contêiner sem distorção */
+}
+
+ /* Barra fixa no lado direito */
+.barra-fixa {
+    position: fixed;
+    top: 0;
+    right: 0; /* Mover para o lado direito */
+    width: 400px; /* largura da barra */
+    height: 100%; /* altura da barra, ocupa a tela inteira */
+    background-image: url(imagens/biimic.jpg);
+    padding: 20px;
+}
+
+.barra-fixa a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+
+.barra-fixa a:hover {
+    background-image: url(imagens/biimic.jpg);
+}
+
+/*caixinha de conteúdo*/
+
+.conteudo {
+  margin-left: 220px; /* Faz o conteúdo começar após a barra fixa */
+  padding: 20px;
+  text-align: center;
+  width:  50%; /* A largura restante para o conteúdo */
+  background-color: #f4f4f4;
+}
+
+/* Estilo básico para o conteúdo */
+.conteudo h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.conteudo p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+  header {
+    background-image: url("imagens/michaelcrian.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+  }
+  
+
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+/*botões de acesso para as outras páginas*/
+  button{
+    background: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size:  16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+    width: 195px;
+    height: 55px;
+}
+
+/*Quando o cursor do mouse ficar em cima do botão, ele ficará branco*/
+button:hover{
+    background:  white;
+    color: white;
+}
+
+/*fundo do botão transparente*/
+button:focus{
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+  .menu {
+    display: flex;
+    position: relative;
+    justify-content: left;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+/* menus que podem ser exibidos ou ocultados ao clicar em um botão.*/
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+
+/*classes específicas*/
+ .mic{
+    text-align: center;
+    width: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+ }
+.sub{
+    text-align: center;
+    width: 50%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+.conte{
+    width: 70%;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+.inf{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 35px;
+}
+
+.ig{
+ text-align: center;
+}
+
+/*responsividade para telas menores*/
+@media (max-width:450px){
+  .barra-fixa{
+    display: none;
+  }
+
+.content{
+  margin-left: 0;
+  width: 100%;
+}
+
+.navbar{
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu{
+  display: flex;
+  position: relative;
+  list-style: none;
+  gap: 7px;
+  text-align: center;
+}
+
+button{
+  width: 50;
+  height: 25;
+}
+
+.mic, .sub{
+  width: 100%;
+  text-align: center;
+}
+
+.conte{
+  width: 100%;
+  padding: 10px;
+}
+
+.conteudo{
+  margin-left: 0px; /* Faz o conteúdo começar após a barra fixa */
+  padding: 50px;
+  text-align: center;
+  width: 100%; /* A largura restante para o conteúdo */
+}
+.conteudo h1 {
+  font-size: 2em;
+  justify-content: flex-end;
+}
+
+.conteudo p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  justify-content: flex-end;
+}
+
+button{
+  background: transparent;
+  border: 2px solid white;
+  padding: 15px 15px;
+  font-size:  12px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+  width: 80px;
+  height: 60px;
+  text-align: left;
+}
+}
+
+/*responsividade para telas maiores*/
+@media  (orientation: landscape){
+  button{
+  width: 200px;
+  height: 70px;
+  text-align: center;
+  padding: 15px 15px;
+  font-size:  20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.barra-fixa{
+  width: 350px; /* largura da barra */
+}
+}
+  

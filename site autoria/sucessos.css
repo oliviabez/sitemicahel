@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:burlywood;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain; /* A imagem será ajustada para caber dentro do contêiner sem distorção */
+}
+
+/* Barra fixa no lado direito */
+.barra-fixa {
+    position: fixed;
+    top: 0;
+    right: 0; /* Mover para o lado direito */
+    width: 400px; /* largura da barra */
+    height: 100%; /* altura da barra, ocupa a tela inteira */
+    background-image: url(imagens/tres.jpg);
+    padding: 20px;
+}
+
+.barra-fixa a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+
+.barra-fixa a:hover {
+    background-color: white;
+}
+
+/* Estilo básico para o conteúdo */
+.conteudo {
+  margin-left: 220px; /* Faz o conteúdo começar após a barra fixa */
+  padding: 20px;
+  text-align: center;
+  width:  50%; /* A largura restante para o conteúdo */
+  background-color: #f4f4f4;
+}
+
+.conteudo h1 {
+    font-size: 2em;
+    color: white;
+}
+
+.conteudo p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+header {
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+}
+  
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 10px 20px;
+}
+  
+button{
+    background: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size:  16px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-sizing: border-box; 
+    width: 195px;
+    height: 55px;
+}
+
+button:hover{
+    background:  white;
+    color: white;
+}
+
+button:focus{
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+  .menu {
+    display: flex;
+    position: relative;
+    justify-content: left;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+
+  .mic{
+    text-align: center;
+    width: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+ }
+.sub{
+    text-align: center;
+    width: 50%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+/* conteudo do site, fora da caixinha*/
+.conte{
+    width: 70%;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+
+.ig{
+    text-align: center;
+}
+
+/*responsividade*/
+@media (max-width:450px){
+  .barra-fixa{
+    display: none;
+  }
+
+.content{
+  margin-left: 0;
+  width: 100%;
+}
+
+.navbar{
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu{
+  flex-direction: column;
+  text-align: center;
+}
+
+.mic, .sub{
+  width: 100%;
+  text-align: center;
+}
+
+.conte{
+  width: 100%;
+  padding: 10px;
+}
+
+.conteudo{
+  margin-left: 0px; /* Faz o conteúdo começar após a barra fixa */
+  padding: 30px;
+  text-align: center;
+  width: 100%; /* A largura restante para o conteúdo */
+}
+}
+
+/*responsividade para telas maiores*/
+@media  (orientation: landscape){
+  button{
+  width: 200px;
+  height: 70px;
+  text-align: center;
+  padding: 15px 15px;
+  font-size:  20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.barra-fixa{
+  width: 350px; /* largura da barra */
+}
+}
